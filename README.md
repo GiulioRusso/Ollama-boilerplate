@@ -6,18 +6,22 @@ Boilerplate for working with the Llama API via the Ollama platform.
 
 ```
 Ollama-boilerplate/
-├── main.py                # Main script to run the project
 ├── prompts/               # Folder containing prompt text files
 │   ├── system_prompt.txt  # System prompt content
 │   ├── user_prompt.txt    # User prompt content
 ├── utility/               # Utility scripts
 │   ├── build_messages.py  # Builds messages for the Ollama API
-│   ├── check_api.py       # Validates the Ollama API endpoint
 │   ├── call_Ollama.py     # Handles API calls to Ollama
-├── requirements.txt       # List of dependencies
-├── .gitignore             # Git ignore file
+│   ├── check_api.py       # Validates the Ollama API endpoint
+│   ├── debug_print.py     # Prints debug information
+│   ├── indent_prompt.py   # Formats text with indentation
+│   ├── load_key.py        # Loads the API key from .env
+│   ├── read_file.py       # Reads content from text files
 ├── .env                   # Environment file (API endpoint)
+├── .gitignore             # Git ignore file
+├── main.py                # Main script to run the project
 ├── README.md              # Project documentation
+├── requirements.txt       # List of dependencies
 ```
 
 ---
