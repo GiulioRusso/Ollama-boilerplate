@@ -1,4 +1,4 @@
-# Llama Boilerplate Project
+# 🦙 Llama Boilerplate Project
 
 Boilerplate for working with the Llama API via the Ollama platform.
 
