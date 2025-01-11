@@ -1,27 +1,29 @@
 # 🦙 Llama Boilerplate Project
 
 Boilerplate for working with the Llama API via the Ollama platform.
+<br><img src="output/example.png">
 
 ## Structure
 
 ```
 Ollama-boilerplate/
-├── prompts/               # Folder containing prompt text files
-│   ├── system_prompt.txt  # System prompt content
-│   ├── user_prompt.txt    # User prompt content
-├── utility/               # Utility scripts
-│   ├── build_messages.py  # Builds messages for the Ollama API
-│   ├── call_Ollama.py     # Handles API calls to Ollama
-│   ├── check_api.py       # Validates the Ollama API endpoint
-│   ├── debug_print.py     # Prints debug information
-│   ├── indent_prompt.py   # Formats text with indentation
-│   ├── load_key.py        # Loads the API key from .env
-│   ├── read_file.py       # Reads content from text files
-├── .env                   # Environment file (API endpoint)
-├── .gitignore             # Git ignore file
-├── main.py                # Main script to run the project
-├── README.md              # Project documentation
-├── requirements.txt       # List of dependencies
+├── prompts/                        # Folder containing prompt text files
+│   ├── init_terminal.txt           # Welcome print content
+│   ├── system_prompt.txt           # System prompt content
+├── utility/                        # Utility scripts
+│   ├── build_messages.py           # Builds messages for the Ollama API
+│   ├── call_Ollama.py              # Handles API calls to Ollama
+│   ├── check_api.py                # Validates the API key
+│   ├── debug_print.py              # Prints debug information
+│   ├── display_init_terminal.py    # Initialize the welcome message inside the terminal
+│   ├── load_key.py                 # Loads the API key from .env
+│   ├── print_responde.py           # Print the Ollama reponse with a typewriter effect
+│   ├── read_prompt.py              # Reads content from the prompt text file
+├── .env                            # Environment file (API endpoint)
+├── .gitignore                      # Git ignore file
+├── main.py                         # Main script to run the project
+├── README.md                       # Project documentation
+├── requirements.txt                # List of dependencies
 ```
 
 ---
@@ -52,7 +54,7 @@ Ollama-boilerplate/
 ### Step 1: Install Dependencies
 Install the required Python libraries from `requirements.txt`:
 ```bash
-pip3 install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 ### Step 2: Create the `.env` File
@@ -76,16 +78,16 @@ Run the `main.py` script with custom file paths and model names as parameters:
 ```bash
 python3 main.py
 --system_prompt ./prompts/system_prompt.txt
---user_prompt ./prompts/user_prompt.txt
 --model llama3.2
 ```
 
----
+or
 
-## Utility Scripts
-- **`check_api.py`**: Validates the Ollama API endpoint and ensures the server is running.
-- **`call_Ollama.py`**: Sends messages to the Ollama API and retrieves the response.
-- **`build_messages.py`**: Constructs message objects for the Ollama API.
+```bash
+python3 main.py
+--sp ./prompts/system_prompt.txt
+--m llama3.2
+```
 
 ---
 
@@ -100,6 +102,8 @@ python3 main.py
   ```
 - **Dependency Issues**: Run `pip3 install -r requirements.txt` to install all required dependencies.
 - **API Errors**: Check the `OLLAMA_API` variable in your `.env` file and ensure it points to a running server.
+
+Your problem is not mentioned? Feel free to ask about it to me or by submitting an issue.
 
 ---
 

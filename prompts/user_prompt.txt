@@ -1,5 +1,0 @@
-Review the following code for potential issues and suggest improvements:
-```python
-def add(a, b):  
-    return a + b  
-print(add(3, '4'))

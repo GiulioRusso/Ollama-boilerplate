@@ -1,24 +1,32 @@
 import ollama
+from utility.debug_print import debug_print
+from utility.print_response import print_response
 
 
 def call_Ollama(messages: list,
-                model: str) -> None:
+                model: str,
+                debug: bool = False) -> None:
     """
     Call the Ollama API to query the model. Print the response content.
 
     :param messages: input message in the Ollama API format.
+    :param model: Ollama model.
+    _param debug: Debug flag.
     """
 
     try:
+        # debug print
+        if debug:
+            debug_print(messages=messages, model=model)
+
         # call Ollama
-        response = ollama.chat(model=model, messages=messages)
-        
+        response = ollama.chat(model=model,
+                               messages=messages,
+                               stream=True)
+
         # print Ollama response
-        ollama_response = response['message']['content']
-        
-        print("\n\t>>> Ollama Response: ")
-        print(ollama_response)
+        print_response(response=response)
 
     except Exception as e:
 
-        print(f"\n\t>>> ERROR: An unexpected error occurred: {str(e)}")
+        print(f"!!! ERROR: An unexpected error occurred: {str(e)}")

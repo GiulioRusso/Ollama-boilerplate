@@ -1,4 +1,4 @@
-def read_file(file_path: str) -> str:
+def read_prompt(file_path: str) -> str:
     """
     Reads the content of a text file and returns it as a string.
 
