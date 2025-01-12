@@ -16,7 +16,7 @@ Ollama-boilerplate/
 │   ├── check_api.py                # Validates the API key
 │   ├── debug_print.py              # Prints debug information
 │   ├── display_init_terminal.py    # Initialize the welcome message inside the terminal
-│   ├── load_key.py                 # Loads the API key from .env
+│   ├── load_api.py                 # Loads the API key from .env
 │   ├── print_responde.py           # Print the Ollama reponse with a typewriter effect
 │   ├── read_prompt.py              # Reads content from the prompt text file
 ├── .env                            # Environment file (API endpoint)
