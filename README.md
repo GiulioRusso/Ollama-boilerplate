@@ -66,11 +66,10 @@ echo "OLLAMA_API=http://localhost:11434/" > .env
 Ensure the server URL matches the one provided by Ollama.
 
 ### Step 3: Fill the `prompts/` Directory
-Ensure that the `prompts/` folder contains the following files:
+Ensure that the `prompts/` folder contains the following file:
 - `system_prompt.txt`: A text file with the system prompt.
-- `user_prompt.txt`: A text file with the user prompt.
 
-You can modify these files to suit your use case.
+You can store differen system prompt files in this folder and suit them to your use case.
 
 ### Step 4: Run the Main Script
 Run the `main.py` script with custom file paths and model names as parameters:
